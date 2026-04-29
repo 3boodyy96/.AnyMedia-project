@@ -11,23 +11,36 @@
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+    --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 20px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-
 }
 
+
+* {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+}
+
+
+.roundedButton,
+.normalButton
+{
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);;
+}
 
 body {
   margin: 0;
 }
 
-.roundedButton::after{
+.roundedButton::after {
   content: "";
   position: absolute;
   top: 0;
@@ -38,4 +51,3 @@ body {
   border-radius: inherit;
   opacity: 0;
 }
-

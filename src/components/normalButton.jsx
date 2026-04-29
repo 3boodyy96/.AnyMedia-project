@@ -8,6 +8,7 @@ function NormalButton({ width = width, height = height }) {
         >
             <button
                 className="
+                normalButton
                 w-${width} h-${height}
                 p-3
                 text-white text-lg break-after-all
