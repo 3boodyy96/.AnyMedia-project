@@ -16,10 +16,11 @@ function NormalButton({ width = width, height = height }) {
                 rounded-lg
                 cursor-pointer
                 items-center
+                translate-y-3
                 justify-center
                 hover:brightness-125 
                 transition duration-500 
-                after:justify-center after:items-center after:absolute after:inset-x-0 after:top-1/5 after:h-1/3 after:w-full after:bg-gradient-to-t after:from-white/20 after:to-transparent after:rounded-b-full after:content-['']
+                after:justify-center after:items-center after:absolute after:inset-x-0 after:h-3/5 after:w-full after:bg-gradient-to-t after:from-white/5 after:to-white/45 after:rounded-b-xl after:rounded-t-lg after:content-['']
             "
             >
                 im a button
