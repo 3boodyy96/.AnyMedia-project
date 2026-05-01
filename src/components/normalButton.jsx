@@ -1,4 +1,4 @@
-function NormalButton({ width = width, height = height }) {
+function NormalButton({ w = w, h = h ,text = text}) {
     return (
         <div
             id="container"
@@ -9,7 +9,7 @@ function NormalButton({ width = width, height = height }) {
             <button
                 className="
                 normalButton
-                w-${width} h-${height}
+                w-${w} h-${h}
                 p-3
                 text-white text-lg break-after-all
                 bg-radial-[at_50%_100%] from-green-400 to-green-800 to-80%
@@ -23,7 +23,7 @@ function NormalButton({ width = width, height = height }) {
                 after:justify-center after:items-center after:absolute after:inset-x-0 after:h-3/5 after:w-full after:bg-gradient-to-t after:from-white/5 after:to-white/45 after:rounded-b-xl after:rounded-t-lg after:content-['']
             "
             >
-                im a button
+                {text}
             </button>
         </div>
     );
