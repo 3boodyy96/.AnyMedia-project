@@ -4,12 +4,12 @@ function Frame({ w = "auto", h = "auto", items = [] }) {
             <img
                 src="./src/assets/frame.png"
                 alt="Frame"
-                style={{ width: w, height: h }}/>
-            <div className="absolute inset-0 p-4">
+                className="w-full h-full"
+            />
+            <div className="absolute inset-0 flex items-center justify-center p-4">
                 {items}
             </div>
         </div>
     );
 }
-
 export default Frame;
