@@ -4,6 +4,7 @@ import Bg from "./components/bg";
 function LoginPage() {
     return (
         <div className="flex items-center justify-center h-screen">
+            {/*  */}
             <Bg />
             <Frame
                 w="70%"
