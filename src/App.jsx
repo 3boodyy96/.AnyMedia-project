@@ -1,4 +1,5 @@
-import LoginPage from './signin-login_page.jsx';
+import DropDownMenu from '../src/components/dropDownMenu.jsx';
+// import LoginPage from './signin-login_page.jsx';
 export default function App() {
   return (
     // <div className='justify-center gap-2 flex items-center'>
@@ -7,6 +8,7 @@ export default function App() {
     //   <Frame w="200px" h="150px"
     //   items={<p>Sample Item</p>}/>
     // </div>
-    <LoginPage />
+    <DropDownMenu options={["test\n",'test1\n',';\n']} text={'hello'} id={'dropdownTest'}/>
+    /* <LoginPage /> */
   )
 }
