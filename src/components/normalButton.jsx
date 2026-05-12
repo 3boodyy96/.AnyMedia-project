@@ -1,28 +1,36 @@
-function NormalButton({ w = w, h = h ,text = text}) {
+function NormalButton({ w, h, text, onClick, id, className, imgSrc }) {
     return (
         <div
-            id="container"
+            id={id}
             className="
             relative
         "
         >
             <button
-                className="
-                normalButton
-                w-${w} h-${h}
-                p-3
-                text-white text-lg break-after-all
-                bg-radial-[at_50%_100%] from-green-400 to-green-800 to-80%
-                rounded-lg
-                cursor-pointer
-                items-center
-                translate-y-3
-                justify-center
-                hover:brightness-125 
-                transition duration-500 
-                after:justify-center after:items-center after:absolute after:inset-x-0 after:h-3/5 after:w-full after:bg-gradient-to-t after:from-white/5 after:to-white/45 after:rounded-b-xl after:rounded-t-lg after:content-['']
-            "
+                onClick={onClick}
+                style={{ width: w, height: h }}
+                className={`
+                normalButton relative overflow-hidden p-3
+        text-white text-lg
+        bg-radial-[at_50%_100%] from-green-400 to-green-800 to-80%
+        rounded-lg cursor-pointer translate-y-3
+        hover:brightness-125 transition duration-500
+        after:content-[''] after:absolute after:inset-x-0 after:top-0
+        after:h-6/10 after:w-full
+        after:bg-gradient-to-b after:from-white/50 after:to-white/10
+        after:rounded-t-lg after:pointer-events-none
+        ${className ?? ""}
+            `}
             >
+                {imgSrc && (
+                    <img
+                        src={imgSrc}
+                        alt={text}
+                        className="
+                    mt-2
+                "
+                    />
+                )}
                 {text}
             </button>
         </div>
