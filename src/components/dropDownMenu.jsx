@@ -15,7 +15,7 @@ function DropDownMenu({ options, onSelect, text, id, containerStyle,ButtonStyle,
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div id={id} className={`relative inline-block ${containerStyle ?? ""}`}>
+    <div id={id} className={`relative inline-block hover:brightness-125 transition-all duration-500 ${containerStyle ?? ""}`}>
       <div className="flex flex-row gap-0.5">
         {/* Toggle button */}
         <NormalButton
@@ -28,9 +28,11 @@ function DropDownMenu({ options, onSelect, text, id, containerStyle,ButtonStyle,
             rounded-r-none!
             after:rounded-r-none!
             after:rounded-bl-lg!
+            hover:brightness-100!
             dropdown-toggle
             ${ButtonStyle ?? ''}
-          `}
+          `
+        }
         />
         {/* Arrow icon button */}
         <NormalButton
@@ -43,6 +45,7 @@ function DropDownMenu({ options, onSelect, text, id, containerStyle,ButtonStyle,
             dropdown-icon
             after:rounded-l-none!
             after:rounded-br-xl!
+            hover:brightness-100!
             ${ButtonIconStyle ?? ''}
           `}
         />
