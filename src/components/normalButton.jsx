@@ -19,6 +19,7 @@ function NormalButton({ w, h, text, onClick, id, className, imgSrc }) {
         after:h-6/10 after:w-full
         after:bg-gradient-to-b after:from-white/50 after:to-white/10
         after:rounded-t-lg after:pointer-events-none
+        transition-all after:duration-500
         ${className ?? ""}
             `}
             >
