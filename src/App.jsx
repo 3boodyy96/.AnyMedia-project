@@ -8,7 +8,14 @@ export default function App() {
     //   <Frame w="200px" h="150px"
     //   items={<p>Sample Item</p>}/>
     // </div>
-    <DropDownMenu options={["test\n",'test1\n',';\n']} text={'hello'} id={'dropdownTest'}/>
-    /* <LoginPage /> */
+<DropDownMenu
+  text="hello"
+  id="dropdownTest"
+  options={[
+    { label: "Profile",  value: "profile",  action: () => console.log("Go to profile") },
+    { label: "Settings", value: "settings", action: () => alert("Open settings") },
+    { label: "Logout",   value: "logout",   action: () => console.log("Logging out...") },
+  ]}
+/>    /* <LoginPage /> */
   )
 }

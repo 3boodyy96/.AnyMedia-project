@@ -41,10 +41,6 @@ body {
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);;
 }
 
-.normalButton::after {
-  transform: translateY(-10px);
-}
-
 .roundedButton::after {
   content: "";
   position: absolute;
