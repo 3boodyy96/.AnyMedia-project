@@ -1,7 +1,8 @@
 import { useState } from "react";
 import NormalButton from "../components/normalButton.jsx";
 
-// props: options (array of strings or objects with label, value, action), onSelect (callback), text (button text), id, containerStyle (additional containerStyle classes)
+// props: options (array of strings or objects with label, value, action), onSelect (callback), text (button text), id, containerStyle (additional containerStyle classes) buttonStyle (additional buttonStyle classes), buttonIconStyle (additional buttonIconStyle classes)
+
 function DropDownMenu({ options, onSelect, text, id, containerStyle,ButtonStyle,ButtonIconStyle }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -88,3 +89,29 @@ function DropDownMenu({ options, onSelect, text, id, containerStyle,ButtonStyle,
 }
 
 export default DropDownMenu;
+
+
+// ================================================
+// example usage:
+// ================================================
+
+// import DropDownMenu from "./components/dropDownMenu";
+// export default function App() {
+//     const handleSelect = (value) => {
+//     console.log("Selected:", value);
+//     // value will be "edit", "delete", or "share"
+//     if (value === "edit")   { /* ... */ }
+//     if (value === "delete") { /* ... */ }
+//     if (value === "share")  { /* ... */ }
+//   };
+//   return (
+//     <div>
+//     <DropDownMenu
+//       text="Actions"
+//       id="actions-menu"
+//       options={["edit", "delete", "share"]}
+//       onSelect={handleSelect}
+//       ButtonStyle={'w-60!'}
+// />
+//     </div>
+//   )}
