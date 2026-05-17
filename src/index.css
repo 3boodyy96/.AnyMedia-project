@@ -1,5 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import "tailwindcss";
-
 :root {
   --text: white;
   --bg: linear-gradient(to bottom, #4CBF6B, #417B4E);
