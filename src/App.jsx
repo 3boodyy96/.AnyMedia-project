@@ -1,7 +1,9 @@
-import HomePageBtn from "./components/HomePageBtn.jsx";
+// import HomePageBtn from "./components/HomePageBtn.jsx";
+import AudioCard from "./components/audio-card"
 export default function App() {
-  return(
-    <div id='container'>
-      <HomePageBtn scale="scale-40" url="/" />
+  return (
+    <div>
+      <AudioCard ChannelLink="/" AudioLink="/" Thumbnail="../src/assets/user-avatar.png" AudioName="Sample Audio" ChannelName="Sample Channel" />
     </div>
-  )}
+  )
+}
