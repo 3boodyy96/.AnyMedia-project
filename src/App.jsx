@@ -1,9 +1,9 @@
-// import HomePageBtn from "./components/HomePageBtn.jsx";
-import AudioCard from "./components/audio-card"
+import LoginPage from "./pages/signin-login_page"
 export default function App() {
   return (
     <div>
-      <AudioCard ChannelLink="/" AudioLink="/" Thumbnail="../src/assets/user-avatar.png" AudioName="Sample Audio" ChannelName="Sample Channel" />
+      <LoginPage />
+      
     </div>
   )
 }
