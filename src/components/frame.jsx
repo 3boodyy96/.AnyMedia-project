@@ -6,7 +6,7 @@ function Frame({ w = "auto", h = "auto", items = [] }) {
                 alt="Frame"
                 className="w-full h-full"
             />
-            <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
                 {items}
             </div>
         </div>
