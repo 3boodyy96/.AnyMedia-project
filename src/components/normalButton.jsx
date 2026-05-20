@@ -17,7 +17,7 @@ function NormalButton({ w, h, text, onClick, id, className, imgSrc }) {
         hover:brightness-125 transition duration-500
         after:content-[''] after:absolute after:inset-x-0 after:top-0
         after:h-6/10 after:w-full
-        after:bg-gradient-to-b after:from-white/50 after:to-white/0
+        after:bg-gradient-to-b after:from-white/50 after:to-white/10 after:rounded-b-4xl
         after:rounded-t-lg after:pointer-events-none
         transition-all after:duration-500
         ${className ?? ""}
