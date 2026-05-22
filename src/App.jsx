@@ -1,8 +1,8 @@
-import LoginPage from "./pages/signin-login_page"
+import VerficationCodePage from "./pages/verfication-code-page.jsx"
 export default function App() {
   return (
     <div>
-      <LoginPage />
+      <VerficationCodePage />
       
     </div>
   )
