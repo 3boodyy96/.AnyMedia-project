@@ -10,9 +10,10 @@ function Checkbox({ onChange }) {
     <div
       onClick={handleClick}
       className="
+            checkbox
             overflow-visible
             w-20 h-20
-            border-2 border-white
+            border-3 border-solid border-white
             cursor-pointer
             relative
           "
