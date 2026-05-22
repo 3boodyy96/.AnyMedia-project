@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { className ,useState } from "react";
 
 function Checkbox({ onChange }) {
   const [checked, setChecked] = useState(false);
@@ -27,6 +27,7 @@ function Checkbox({ onChange }) {
                     w-16 h-16
                     absolute  -right-1 -top-1 scale-200 transition-opacity duration-100
                     ${checked ? "opacity-100" : "opacity-0"}
+                    ${className ?? ''}
                   `}
         />
     </div>

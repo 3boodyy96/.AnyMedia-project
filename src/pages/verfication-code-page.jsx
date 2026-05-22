@@ -25,11 +25,18 @@ function VerficationCodePage() {
         <div className="flex h-screen items-center justify-center">
             <Bg />
             <Frame
-                w="40%"
-                h="80%"
+                id="verfPageFrame"
+                responsive="w-[90%] h-[90vh] sm:w-[70%] md:w-[50%]"
                 items={
-                    <div className="flex flex-col mt-20 gap-5 w-full h-full items-center justify-center">
-                        <h1 className="text-6xl mr-30 gap-0 font-bold text-white sm:text-4xl md:text-6xl translate-y-7">
+                    <div className="
+                    flex flex-col mt-20 gap-3 sm:gap-5 px-4 sm:px-8
+                    md:px-16 w-full h-full items-center justify-center 
+                    ">
+                        <h1 className="mr-30 gap-0 font-bold text-white 
+                            text-lg
+                            sm:text-2xl
+                            md:text-4xl
+                            lg:text-5xl translate-y-7">
                             we have sent a verification <br />
                             code to your email, please <br />
                             enter the code here <br />
