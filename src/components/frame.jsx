@@ -1,6 +1,9 @@
-function Frame({ w = "auto", h = "auto", items = [] }) {
+function Frame({ w = "auto", h = "auto", items = [], responsive = "" }) {
     return (
-        <div id="container" className="relative inline-block" style={{ width: w, height: h }}>
+        <div
+            className={`relative inline-block ${responsive}`}
+            style={{ width: w, height: h }}
+        >
             <img
                 src="./src/assets/frame.png"
                 alt="Frame"
