@@ -1,4 +1,4 @@
-function NormalButton({ w, h, text, onClick, id, className, imgSrc }) {
+function NormalButton({ w, h, text, onClick, id, className, imgSrc, disabled }) {
     return (
         <div
             id={id}
@@ -9,6 +9,7 @@ function NormalButton({ w, h, text, onClick, id, className, imgSrc }) {
             <button
                 onClick={onClick}
                 style={{ width: w, height: h }}
+                disabled={disabled}
                 className={`
                 normalButton relative overflow-hidden p-3
         text-white text-lg

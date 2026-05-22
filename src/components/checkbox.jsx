@@ -11,7 +11,7 @@ function Checkbox({ onChange }) {
       onClick={handleClick}
       className="
             overflow-visible
-            w-10 h-10
+            w-20 h-20
             border-2 border-white
             cursor-pointer
             relative
@@ -24,7 +24,7 @@ function Checkbox({ onChange }) {
           className={`
                     object-contain
                     w-16 h-16
-                    absolute -bottom-1 -right-2 scale-200 transition-opacity duration-100
+                    absolute  -right-1 -top-1 scale-200 transition-opacity duration-100
                     ${checked ? "opacity-100" : "opacity-0"}
                   `}
         />
