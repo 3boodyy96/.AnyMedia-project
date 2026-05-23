@@ -9,71 +9,66 @@ function VerficationCodePage() {
 
     function handleCheckbox(value) {
         setIsChecked(value);
-        console.log(value ? "checked" : "unchecked")
-        if (value) {
-            // enable the button
-            document.querySelector(".next-button").classList.add("brightness-100!");
-            document.querySelector(".next-button").classList.add("hover:brightness-125!");
-        } else {
-            // disable the button
-            document.querySelector(".next-button").classList.remove("brightness-100!");
-            document.querySelector(".next-button").classList.remove("hover:brightness-125!");
-        }
+        console.log(value ? "checked" : "unchecked");
     }
 
     return (
-        <div className="flex h-screen items-center justify-center">
+        <div className="flex min-h-screen items-center justify-center p-4">
             <Bg />
             <Frame
                 id="verfPageFrame"
-                responsive="w-[90%] h-[90vh] sm:w-[70%] md:w-[50%]"
+                responsive="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] h-[100%] md:h-[85vh]"
                 items={
-                    <div className="
-                    flex flex-col mt-20 gap-3 sm:gap-5 px-4 sm:px-8
-                    md:px-16 w-full h-full items-center justify-center 
-                    ">
-                        <h1 className="mr-30 gap-0 font-bold text-white 
-                            text-lg
-                            sm:text-2xl
-                            md:text-4xl
-                            lg:text-5xl translate-y-7">
-                            we have sent a verification <br />
-                            code to your email, please <br />
-                            enter the code here <br />
+                    <div className="flex flex-col gap-6 md:gap-8 px-4 py-8 sm:px-8 md:px-12 w-full h-full items-center justify-center text-center md:text-left">
+                        
+                        <h1 className="font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-snug w-full max-w-md">
+                            We have sent a verification <br className="hidden sm:inline" />
+                            code to your email, please <br className="hidden sm:inline" />
+                            enter the code here
                         </h1>
+
                         <input
                             type="text"
                             id="verification-code"
                             placeholder="6 numbers"
-                            className="block w-[85%] mt-1 p-1.5 text-black text-sm bg-gray-100 border-black border-2 rounded-0 sm:p-2 sm:text-base gap-0"
+                            className="block w-full max-w-md mt-2 p-2.5 text-black text-base bg-gray-100 border-black border-2 rounded-md tracking-widest text-center md:text-left"
                         />
-                        <div className="flex  space-x-4 items-center w-10/12 justify-between">
-                            <h1 className="text-white text-xl font-bold">
-                                i have read and <br />
-                                accept the privacy policy<br />
-                                and Terms of Use<br />
-                            </h1>
-                            <Checkbox onChange={handleCheckbox} />
+
+                        <div className="flex flex-col sm:flex-row items-center w-full max-w-md justify-between gap-4 bg-black/10 p-3 rounded-lg">
+                            <h2 className="text-white text-sm sm:text-base md:text-lg font-medium text-center sm:text-left leading-tight">
+                                I have read and <br className="hidden sm:inline" />
+                                accept the privacy policy <br className="hidden sm:inline" />
+                                and Terms of Use
+                            </h2>
+                            <div className="flex-shrink-0">
+                                <Checkbox onChange={handleCheckbox} />
+                            </div>
                         </div>
-                        <div className="flex items-center w-10/12 justify-between">
-                            <h1 className="text-white text-xl font-bold mr-10 mt-4">
-                                captcha 🥀✌
-                            </h1>
+
+                        <div className="flex flex-col sm:flex-row items-center w-full max-w-md justify-between gap-4 mt-2">
+                            <h2 className="text-white text-lg sm:text-xl font-bold opacity-80">
+                                Captcha 🥀✌
+                            </h2>
+                            
                             <NormalButton
                                 w="fit-content"
                                 h="fit-content"
                                 text="Next"
                                 onClick={() => console.log('hi')}
                                 disabled={!isChecked}
-                                className="
-                                pl-9! pr-9! pt-2! pb-2! text-[50px]! translate-x-5
-                                next-button brightness-50! hover:none! transition duration-300"
+                                className={`w-full sm:w-auto px-8 py-2 text-xl font-bold rounded-md transition duration-300 ${
+                                    isChecked 
+                                        ? "brightness-100 hover:brightness-125 cursor-pointer" 
+                                        : "brightness-50 cursor-not-allowed"
+                                }`}
                             />
                         </div>
+
                     </div>
                 }
             />
         </div>
     );
 }
+
 export default VerficationCodePage;
