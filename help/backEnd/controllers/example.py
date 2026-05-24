@@ -4,7 +4,7 @@ from sqlalchemy import Column, String, Integer, create_engine, Sequence, Foreign
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 import sqlalchemy as sa
 
-load_dotenv("C:\\Users\\PC\\Documents\\programming\\.AnyMedia-project\\help\\backEnd\\.env\\main.py")
+load_dotenv('..\\.env\\main.py')
 engine = create_engine(os.getenv("DB_URL"))
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -22,7 +22,7 @@ class Users(Base):
 
 Base.metadata.create_all(engine)
 
-test = Users(id=1, name="3boodyy96", UserName="3boodyy96", email="test", password="123456")
+test = Users(id=2, name="3boodyy962", UserName="3boodyy962", email="test2", password="123456")
 
 session.add(test)
 session.commit()
