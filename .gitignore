@@ -24,5 +24,8 @@ dist-ssr
 *.sw?
 
 # backend
-/help 💔/backEnd/.env
-/help 💔/backEnd/.venv
+# backend
+help/backEnd/.env
+help/backEnd/.venv
+help/backEnd/__pycache__/
+*.pyc
