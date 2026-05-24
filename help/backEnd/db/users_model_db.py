@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv, dotenv_values
-from sqlalchemy import Column, String, Integer, create_engine, Sequence, ForeignKey
+from sqlalchemy import Column, String, Integer, create_engine, Sequence, ForeignKey, DateTime, func
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 import sqlalchemy as sa
 
@@ -19,10 +19,4 @@ class Users(Base):
     UserName = Column(String(50), unique=True, nullable=False)
     email = Column(String(100), unique=True, nullable=False)
     password = Column(String(255), nullable=False)
-
-Base.metadata.create_all(engine)
-
-test = Users(id=2, name="3boodyy962", UserName="3boodyy962", email="test2", password="123456")
-
-session.add(test)
-session.commit()
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
