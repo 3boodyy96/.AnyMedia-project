@@ -14,7 +14,7 @@ function VerficationCodePage() {
 
     return (
         <div className="flex min-h-screen items-center justify-center p-4">
-            <Bg />
+            <Bg className="sm:top-25 scale-y-150 md:top-20 scale-y-150 lg:top-20 scale-y-120" />
             <Frame
                 id="verfPageFrame"
                 responsive="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] h-[100%] md:h-[85vh]"
