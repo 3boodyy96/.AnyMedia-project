@@ -31,6 +31,7 @@ function VerficationCodePage() {
                             type="text"
                             id="verification-code"
                             placeholder="6 numbers"
+                            maxlength={6}
                             className="block w-full max-w-md mt-2 p-2.5 text-black text-base bg-gray-100 border-black border-2 rounded-md tracking-widest text-center md:text-left"
                         />
 
@@ -58,7 +59,7 @@ function VerficationCodePage() {
                                 disabled={!isChecked}
                                 className={`w-full sm:w-auto px-8 py-2 text-xl font-bold rounded-md transition duration-300 ${
                                     isChecked 
-                                        ? "brightness-100 hover:brightness-125 cursor-pointer" 
+                                        ? "brightness-100 hover:brightness-125 cursor-pointer " 
                                         : "brightness-50 cursor-not-allowed"
                                 }`}
                             />
