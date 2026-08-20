@@ -1,13 +1,8 @@
-function Bg({className}) {
+function Bg() {
     return (
-    <div
-        className={`
-        w-full h-full
-        bg-[url('/src/assets/background.png')] bg-cover bg-center bg-no-repeat
-        absolute inset-0
-        ${className ?? ""}
-    `}
-    />
+    <div className="fixed size-full top-0 left-0 z-[-1] pointer-events-none ">
+                <img src="/src/assets/background.png" className="size-full object-cover" />
+            </div>
     );
 }
 

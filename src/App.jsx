@@ -1,9 +1,7 @@
-import HomePageD1 from "./pages/homePages/home-page-d1.jsx"
-
+import VerficationCodePage from "./pages/verfication-code-page.jsx"
 export default function App() {
   return (
-    <div>
-      <HomePageD1 />
-    </div>
+      <VerficationCodePage />
+
   )
 }

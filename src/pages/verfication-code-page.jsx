@@ -13,11 +13,13 @@ function VerficationCodePage() {
     }
 
     return (
-        <div className="flex min-h-screen items-center justify-center p-4">
-            <Bg className="sm:top-25 scale-y-150 md:top-20 scale-y-150 lg:top-20 scale-y-120" />
+        <div className="flex h-svh w-screen overflow-auto z-0 relative p-4">
+            <Bg/>
             <Frame
                 id="verfPageFrame"
-                responsive="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] h-[100%] md:h-[85vh]"
+                responsive="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] h-[100%] md:h-[85vh] mx-auto my-auto
+                
+                "
                 items={
                     <div className="flex flex-col gap-6 md:gap-8 px-4 py-8 sm:px-8 md:px-12 w-full h-full items-center justify-center text-center md:text-left">
                         
